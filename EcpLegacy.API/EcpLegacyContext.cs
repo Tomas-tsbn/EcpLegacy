@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
+using EcpLegacy.API.Models;
 
 namespace EcpLegacy.API
 {
@@ -200,7 +201,11 @@ namespace EcpLegacy.API
 
                 entity.Property(e => e.Password)
                     .HasColumnName("password")
-                    .HasMaxLength(255);
+                    .HasMaxLength(1024);
+
+                entity.Property(e => e.PasswordSalt)
+                    .HasColumnName("passwordSalt")
+                    .HasMaxLength(1024);
 
                 entity.Property(e => e.Username)
                     .HasColumnName("username")

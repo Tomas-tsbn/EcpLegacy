@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EcpLegacy.API
+namespace EcpLegacy.API.Models
 {
-    public partial class ActivityStatus
+    public partial class ProjectState
     {
-        public ActivityStatus()
+        public ProjectState()
         {
-            Activity = new HashSet<Activity>();
+            ProjectStateHistory = new HashSet<ProjectStateHistory>();
         }
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Remarks { get; set; }
+        public string Description { get; set; }
         public DateTime? Datecreated { get; set; }
         public DateTime? Datemodified { get; set; }
         public int? Createdbyid { get; set; }
         public int? Modifiedbyid { get; set; }
 
-        public virtual ICollection<Activity> Activity { get; set; }
+        public virtual ICollection<ProjectStateHistory> ProjectStateHistory { get; set; }
     }
 }

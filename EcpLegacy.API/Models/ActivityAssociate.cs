@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EcpLegacy.API
+namespace EcpLegacy.API.Models
 {
     public partial class ActivityAssociate
     {
