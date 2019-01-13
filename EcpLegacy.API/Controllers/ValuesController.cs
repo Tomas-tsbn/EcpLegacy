@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace EcpLegacy.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
